@@ -3,11 +3,12 @@
 ## Exercise I
 
 a)
+
 This algorithm has a Linear O(n) runtime complexity, because the number of operations always increases directly by n as input size increase, since you only need to add the value of N-squared by N times to equal the value of N-cubed.
 
 b)
 
-This algorithm has a Linearithmic O(n log(n)) runtime complexity, because although the outer for loop operation increases directly proportional to an increase in input size N, the inner while loop increases by slightly more than N for each outer loop operation, as the number of times j has to be multiplied by 2 to equal or surpass the value of N increases by slightly less than N times.
+This algorithm has a Linearithmic O(n log(n)) runtime complexity, because although the outer for loop operation increases directly proportional to an increase in input size N, the inner while loop increases by slightly less than N for each outer loop operation, as the number of times j has to be multiplied by 2 to equal or surpass the value of N increases by slightly less than N times.
 
 c)
 
