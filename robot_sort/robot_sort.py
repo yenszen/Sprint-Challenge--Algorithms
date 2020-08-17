@@ -97,7 +97,30 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # since self.light_is_on returns True or False, can use as conditional statement for exiting the loop
+        # bubble sort seems to be the only way we can sort without storing any variables
+        # try to bubble sort the largest number to the end of the list on the way up
+        # and the smallest number to the start on the way down
+        while not self.light_is_on():
+            while self.can_move_right():
+                self.swap_item()
+                self.move_right()
+                if self.compare_item() == 1: # if the left num is larger, we should swap
+                    self.swap_item()
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+
+            self.set_light_on() # condition for exiting loop if the reverse pass through yields no errors
+            while self.can_move_left():
+                self.swap_item()
+                self.move_left()
+                if self.compare_item() == -1: # if right num is smaller, there's an error and we should swap
+                    self.set_light_off() # signifies there's still work left to do
+                    self.swap_item()
+                self.move_right()
+                self.swap_item()
+                self.move_left()
 
 
 if __name__ == "__main__":
